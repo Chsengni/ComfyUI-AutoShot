@@ -2,7 +2,7 @@
 
 基于深度学习的视频镜头自动分割与关键帧提取 ComfyUI 插件。
 
-核心算法改造自 [Shot_Detection](https://github.com/PhucNguyenLamp/Shot_Detection) 仓库，使用 **TransNetV2Supernet** 模型进行镜头边界检测。
+核心算法来自[AutoShot](https://github.com/wentaozhu/AutoShot) 仓库，使用 **TransNetV2Supernet** 模型进行镜头边界检测。
 
 ## 功能特性
 
@@ -143,25 +143,10 @@ pip install torch numpy opencv-python einops tqdm
 - 视频越长，处理时间越长（主要耗时在帧提取和模型推理）
 - 首次运行会加载模型权重（约 57MB），后续运行复用模型实例
 
-## 常见问题
-
-### Q: 报错 "模型权重文件不存在或未正确下载"
-A: 请检查 `autoshot_core/model_weight/ckpt_0_200_0.pth` 文件大小。如果只有几百字节，说明是 LFS 指针文件，需要执行 `git lfs pull` 下载真实权重。
-
-### Q: 检测到的镜头太多/太少怎么办？
-A: 调整 `threshold` 参数：
-- 镜头太多（误检多）→ 增大阈值（如 0.6、0.7）
-- 镜头太少（漏检多）→ 减小阈值（如 0.3、0.4）
-
-### Q: 如何过滤掉极短的闪镜？
-A: 增大 `min_shot_frames` 参数，比如设置为 20 或 30，帧数少于该值的镜头会被过滤掉。
-
-### Q: 前端预览图不显示怎么办？
-A: 请确保 ComfyUI 能正常访问临时目录。预览图保存在 ComfyUI 的 temp 目录下。
 
 ## 致谢
 
-核心算法来自 [Shot_Detection](https://github.com/PhucNguyenLamp/Shot_Detection) 仓库，
+核心算法来自[AutoShot](https://github.com/wentaozhu/AutoShot) 仓库，
 基于 TransNetV2 模型改进。
 
 ## 许可证
