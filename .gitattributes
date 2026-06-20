@@ -1,0 +1,2 @@
+*.pth filter=lfs diff=lfs merge=lfs -text
+autoshot_core/model_weight/**/* filter=lfs diff=lfs merge=lfs -text
