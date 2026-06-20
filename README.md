@@ -12,6 +12,8 @@
 - ✅ **标准 ComfyUI 输出**：输出标准 IMAGE 图片列表，可直接接入后续工作流
 - ✅ **参数可调**：检测阈值、最小镜头长度、关键帧位置均可自定义
 
+<img width="1918" height="898" alt="image" src="https://github.com/user-attachments/assets/967e1d5d-b225-48d1-910c-7104394afefb" />
+
 ## 安装方法
 
 ### 1. 下载插件
