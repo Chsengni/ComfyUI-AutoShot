@@ -1,0 +1,12 @@
+# ComfyUI-AutoShot 插件依赖
+# 仅列出 ComfyUI 环境中可能缺失的额外依赖
+# torch、numpy 等核心依赖 ComfyUI 已预装，此处不重复列出
+
+# 图像处理 - 用于视频帧提取和预览图生成
+opencv-python>=4.5.0
+
+# 张量操作 - supernet.py 中 TransNetV2 模型使用
+einops>=0.6.0
+
+# 进度条 - 模型推理时显示进度
+tqdm>=4.60.0
